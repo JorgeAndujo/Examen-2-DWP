@@ -1,12 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
-const root=ReactDOM.createRoot(document.getElementById('root'));
+localStorage.setItem(
+  "data",
+  JSON.stringify([
+    {
+      id: 1,
+      name: "Francisco",
+      lastname: "Perez",
+      age: 30,
+      curp: "asdsa",
+      address: "solo la calle",
+      phone: 123456,
+      email: "example@gmail.com",
+      height: 1.7,
+      weight: 1.7,
+      category: "paciente",
+    },
+  ])
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
-    
-)
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);

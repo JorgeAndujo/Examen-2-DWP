@@ -1,12 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navegation = () => {
+
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="#">
+          <NavLink className="navbar-brand" to="/home">
             Home
           </NavLink>
           <button
@@ -23,17 +24,17 @@ const Navegation = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link active" to="#">
+                <NavLink className="nav-link active" to="/login">
                   Iniciar sesion
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="#">
+                <NavLink className="nav-link" to="/registrar">
                   Registro
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link " to='#'>
+                <NavLink className="nav-link " to='/control-personal'>
                   Control de personal
                 </NavLink>
               </li>

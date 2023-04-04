@@ -1,9 +1,17 @@
-import React from 'react'
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Navegation from "./components/Navegation";
+import RouteApp from "./routes/RouteApp";
 
 const App = () => {
-  return (
-    <h1>Hola Mundo</h1>  )
-}
+  const navigate = useNavigate()
 
-export default App
+  return (
+    <>
+      <Navegation />
+      <RouteApp />
+    </>
+  );
+};
+
+export default App;
